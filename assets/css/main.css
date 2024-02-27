@@ -20,6 +20,12 @@ body {
     font-size: 15px;
     line-height: 20px;
 }
+p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+}
 a, a:hover{
     text-decoration: none;
 }
@@ -123,6 +129,9 @@ Main menu CSS
     font-size: 20px;
 }
 
+/*===================================
+================Sidebar=============
+======================================*/
 #header-section .sidebar {
     background-color: whitesmoke;
     border-radius: 13px   0 0  013px;
@@ -148,6 +157,15 @@ Main menu CSS
     padding-bottom: 3px;
     background-color: rgb(165 38 43);
 }
+#header-section .sidebar .inner-footer {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 0;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 9%);
+    left: 0;
+    right: 0;
+}
+
 #header-section .sidebar .inner-header .close-btn {
     margin-right: auto;
     padding: 5px;
@@ -170,11 +188,17 @@ Main menu CSS
 }
 #header-section .sidebar .top-bar .profile {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 10px;
-    padding: 10px 0;
+    padding: 10px 0 10px 15px;
+}
+#header-section .sidebar .top-bar .profile .owner-info {
+    border-bottom: 1px solid #00000033;
+}
+#header-section .sidebar .top-bar .profile .dso-info {
+    
+}
+#header-section .sidebar .top-bar .profile .dso-info a {
+    color: inherit;
+    text-shadow: 0px 5px 3px rgb(0 0 0 / 30%);
 }
 #header-section .sidebar .top-bar .profile .pic{
     width: 80px;
@@ -184,18 +208,68 @@ Main menu CSS
     border: 1px solid #fff;
 
 }
-#header-section .sidebar .top-bar .profile .name{
+#header-section .sidebar .top-bar .profile .name {
     font-size: 18px;
-    font-weight: 500px;
+    font-weight: 500;
     letter-spacing: 0.9px;
     text-transform: uppercase;
-    color: #fff;
-
+    color: #000000;
 }
 #header-section .sidebar .top-bar .profile .pic img{
     width: 100%;
     height: auto;
 
+}
+#header-section .sidebar .inner-footer .container{
+    text-align: center;
+    
+}
+#header-section .sidebar .inner-footer span.title{
+    font-weight: 500;
+    font-size: 18px;
+    text-shadow: 0px 5px 3px rgb(0 0 0 / 30%);
+}
+#header-section .sidebar .inner-footer a {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #006b5e;
+    text-shadow: 0px 5px 3px rgb(0 0 0 / 30%);
+}
+/* sidebar menu  */
+
+/*============================================================
+sidebar menu CSS
+==============================================================*/
+
+/* sidebar Menu  */
+#header-section .sidebar .menu-bar .sidebar-menu {
+
+}
+#header-section .sidebar .menu-bar .sidebar-menu ul {
+}
+#header-section .sidebar .menu-bar .sidebar-menu ul li {
+
+    
+}
+#header-section .sidebar .menu-bar .sidebar-menu ul li:nth-child(1) {
+   
+}
+#header-section .sidebar .menu-bar .sidebar-menu ul li a {
+    text-align: left;
+    display: block;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #000000;
+
+}
+#header-section .sidebar .menu-bar .sidebar-menu ul li a:hover {
+    background-color: #dddddd;
+
+
+}
+#header-section .sidebar .menu-bar .sidebar-menu ul li a .icon {
+    margin-right: 8px;
+    font-size: 20px;
 }
 
 
