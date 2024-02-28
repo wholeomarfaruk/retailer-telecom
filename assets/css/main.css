@@ -89,6 +89,62 @@ Header section and main menu CSS
 }
 #header-section .navbar-area .top-bar .profile .name{}
 
+#header-section .navbar-area .top-bar .balance-area {
+    position: relative;
+    overflow: hidden;
+    min-width: 140px;
+    /* box-shadow: 0px 0px 3px rgb(0 0 0 / 35%); */
+    border-radius: 25px;
+    padding: 3px 10px;
+    text-align: center;
+    border: 1px solid rgb(0 0 0 / 7%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 25px;
+}
+#header-section .navbar-area .top-bar .balance-area > .show-on-top {
+    position: absolute;
+    z-index: 2;
+    opacity: 1;
+    transition: all 0.4s ease-in;
+}
+
+
+#header-section .navbar-area .top-bar .balance-area .balance-show-msg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+    background-color: white;
+    line-height: 24px;
+    
+}
+#header-section .navbar-area .top-bar .balance-area .balance-show {
+    background: #dddddd;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease-in;
+}
+#header-section .navbar-area .top-bar .balance-area .balance-show .balance {
+    font-size: 12px;
+    line-height: 24px;
+}
+#header-section .navbar-area .top-bar .balance-area .balance-show .symbal {
+    font-size: 12px;
+    line-height: 24px;
+}
+
+
+
 /* Menu bar css */
 #header-section .navbar-area .menu-bar .menu-bar{}
 
@@ -128,17 +184,44 @@ Main menu CSS
     display: block;
     font-size: 20px;
 }
+/* Floating Button Group  */
+#header-section .navbar-area .menu-bar #main_menu > .floating-btn-group {
+    position: absolute;
+    top: -104%;
+    right: 20px;
+}
+#header-section .navbar-area .menu-bar #main_menu > .floating-btn-group a {
+    padding: 5px;
+    background: red;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    box-shadow: -2px 2px 5px #0000008c;
+}
+#header-section .navbar-area .menu-bar #main_menu > .floating-btn-group a i{
+    font-size: 16px;
+    line-height: 32px;
+}
 
 /*===================================
 ================Sidebar=============
 ======================================*/
+.open{
+    right: 0 !important;
+    transition: 0.5s;
+}
+
+
 #header-section .sidebar {
     background-color: whitesmoke;
     border-radius: 13px   0 0  013px;
     position: fixed;
     overflow: hidden;
     top: 0;
-    right: -100%;
+    right: -110%;
     bottom: 0;
     z-index: 2;
     width: 100%;
@@ -147,10 +230,7 @@ Main menu CSS
     transition: 0.5s;
     box-shadow: 0px 0px 5px rgb(0 0 0 / 60%);
 }
-#header-section .sidebar.open{
-    right: 0 !important;
-    transition: 0.5s;
-}
+
 #header-section .sidebar .inner-header {
     width: 100%;
     padding-top: 3px;
@@ -234,6 +314,7 @@ Main menu CSS
     font-size: 18px;
     color: #006b5e;
     text-shadow: 0px 5px 3px rgb(0 0 0 / 30%);
+    display: inline;
 }
 /* sidebar menu  */
 
@@ -242,6 +323,7 @@ sidebar menu CSS
 ==============================================================*/
 
 /* sidebar Menu  */
+
 #header-section .sidebar .menu-bar .sidebar-menu {
 
 }
@@ -254,7 +336,7 @@ sidebar menu CSS
 #header-section .sidebar .menu-bar .sidebar-menu ul li:nth-child(1) {
    
 }
-#header-section .sidebar .menu-bar .sidebar-menu ul li a {
+#header-section .sidebar .menu-bar .sidebar-menu > ul >li >a {
     text-align: left;
     display: block;
     padding: 10px 20px;
@@ -262,7 +344,7 @@ sidebar menu CSS
     color: #000000;
 
 }
-#header-section .sidebar .menu-bar .sidebar-menu ul li a:hover {
+#header-section .sidebar .menu-bar .sidebar-menu > ul > li > a:hover {
     background-color: #dddddd;
 
 
@@ -271,14 +353,78 @@ sidebar menu CSS
     margin-right: 8px;
     font-size: 20px;
 }
+/* Sub Menu on side bar  */
+#header-section .sidebar  .sidebar-submenu-area .inner-header {
+    width: 100%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: rgb(165 38 43);
+}
+#header-section .sidebar .sidebar-submenu-area .inner-footer {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 0;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 9%);
+    left: 0;
+    right: 0;
+}
 
+#header-section .sidebar .sidebar-submenu-area .inner-header .close-btn {
+    margin-right: auto;
+    padding: 5px;
+    text-align: left;
+    vertical-align: auto;
+    border-radius: 3px;
+}
+#header-section .sidebar .sidebar-submenu-area  .inner-header .close-btn  a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+}
+#header-section .sidebar .sidebar-submenu-area .inner-header .close-btn  a i{
+    font-size: 16px;
+    margin-right: 5px;
+}
 
-
+#header-section .sidebar .sidebar-submenu-area {
+    background-color: whitesmoke;
+    border-radius: 13px   0 0  013px;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: -110%;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    transition: 0.5s;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 60%);
+}
+#header-section .sidebar .sidebar-submenu-area .inner-footer a {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #006b5e;
+    text-shadow: 0px 5px 3px rgb(0 0 0 / 30%);
+    display: inline;
+}
 
 
 
 /* Responsive  */
 
+@media (max-width:306px){
+    /* top bar css  */
+#header-section .navbar-area .top-bar {
+    flex-wrap: wrap;
+}
+#header-section .navbar-area .top-bar .acc-balance {
+    order: 3;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 5px;
+}
+}
 @media (max-width:576px){
     .container{
        padding-right: 0;
@@ -320,3 +466,55 @@ sidebar menu CSS
     }
 
 }
+
+
+/* Animation  */
+
+/* infiniy grid/line loader  */
+  /* HTML: <div class="loader"></div> */
+.loader {
+    width: 90px;
+    height: 12px;
+    --c: #000 50%,#0000 0;
+    background: linear-gradient( 90deg,var(--c)) 0 0,
+      linear-gradient(-90deg,var(--c)) 0 0;
+    background-size: 20px 100%;
+    background-repeat: repeat-x;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    opacity: 0;
+    animation: l10 1s infinite linear;
+    background-color: #fff;
+}
+  @keyframes l10 {
+      100% {background-position: -20px 0,20px 0}
+  }
+
+  /* spinar loader  */
+  /* HTML: <div class="loader-spiner"></div> */
+.loader-spiner {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    border: 4px solid #0000;
+    border-radius: 50%;
+    border-right-color: #25b09b;
+    animation: l15 1s infinite linear;
+  }
+  .loader-spiner::before,
+  .loader-spiner::after {    
+    content: "";
+    grid-area: 1/1;
+    margin: 2px;
+    border: inherit;
+    border-radius: 50%;
+    animation: l15 2s infinite;
+  }
+  .loader-spiner::after {
+    margin: 8px;
+    animation-duration: 3s;
+  }
+  @keyframes l15{ 
+    100%{transform: rotate(1turn)}
+  }

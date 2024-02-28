@@ -26,6 +26,15 @@
                             <div class="pic"><img src="assets/img/profile-pic.png" alt=""></div>
                             <div class="name">Rafi Telecom</div>
                         </div>
+                        <div class="acc-balance">
+                            <div class="balance-area">
+                            <div class="loader"></div>
+                                <div class="balance-show-msg">Tap For Balance</div>
+                                <div class="balance-show"><span class="balance">50,150.36</span><span class="symbal"> TK</span></div>
+
+                            </div>
+                        </div>
+
                         <div class="alert-area">
                             <div class="notification">9+</div>
                         </div>
@@ -33,25 +42,28 @@
                     <div class="menu-bar">
                         <nav id="main_menu">
                             <ul>
-                                <li><a href="#"><span class="icon"><i class="fa fa-tachometer" aria-hidden="true"></i></span>Dashboard</a></li>
-                                <li><a href="#"><span class="icon"><i class="fa fa-money" aria-hidden="true"></i></span>Cashout</a></li>
-                                <li><a href="#"><span class="icon"><i class="fa fa-file" aria-hidden="true"></i></span>Report</a></li>
-                                <li><a href="#" class="sidebar-open-btn"><span class="icon"><i class="fa fa-bars" aria-hidden="true"></i></span>Menu</a></li>
+                                <li><a href="javascript:void(0)" calling-page="home"><span class="icon"><i class="fa fa-tachometer" aria-hidden="true"></i></span>Dashboard</a></li>
+                                <li><a href="javascript:void(0)" calling-page="cashout"><span class="icon"><i class="fa fa-money" aria-hidden="true"></i></span>Cashout</a></li>
+                                <li><a href="javascript:void(0)" calling-page="report"><span class="icon"><i class="fa fa-file" aria-hidden="true"></i></span>Report</a></li>
+                                <li><a href="javascript:void(0)" class="sidebar-open-btn"><span class="icon"><i class="fa fa-bars" aria-hidden="true"></i></span>Menu</a></li>
                             </ul>
+                            <div class="floating-btn-group">
+                                <a href="javascript:void(0)" class="recharge-panel-btn"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                            </div>
                         </nav>
                     </div>
                 </div>
                 <div class="sidebar">
                     <div class="inner-header">
                         <div class="container">
-                        <div class="row">
-                                        <div class="col-auto">
-                                        <div class="close-btn"><a href="javascript:void(0)"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>
-                                        </div>
-                                        <div class="col">
-                                            <h5 class="text-center text-white">Menu</h5>
-                                        </div>
-                                    </div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <div class="main-sidebar-close-btn close-btn"><a href="javascript:void(0)"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>
+                                </div>
+                                <div class="col">
+                                    <h5 class="text-center text-white">Menu</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="inner-body">
@@ -89,7 +101,42 @@
                                     <li><a href="#"><span class="icon"><i class="fa fa-tachometer" aria-hidden="true"></i></span>Dashboard</a></li>
                                     <li><a href="#"><span class="icon"><i class="fa fa-money" aria-hidden="true"></i></span>Cashout</a></li>
                                     <li><a href="#"><span class="icon"><i class="fa fa-file" aria-hidden="true"></i></span>Report</a></li>
-                                    <li><a href="#"><span class="icon"><i class="fa fa-bars" aria-hidden="true"></i></span>Menu</a></li>
+                                    <li><a href="#"><span class="icon"><i class="fa fa-bars" aria-hidden="true"></i></span>Sub Menu</a>
+                                        <div class="sidebar-submenu-area">
+                                            <div class="inner-header">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-auto">
+                                                            <div class="sub-menu-close-btn close-btn"><a href="javascript:void(0)"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <h5 class="text-center text-white">Sub Menu</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="inner-body">
+
+                                                <div class="menu-bar">
+                                                    <div></div>
+                                                    <nav class="sidebar-menu">
+                                                        <ul>
+                                                            <li><a href="#"><span class="icon"><i class="fa fa-tachometer" aria-hidden="true"></i></span>Dashboard</a></li>
+                                                            <li><a href="#"><span class="icon"><i class="fa fa-money" aria-hidden="true"></i></span>Cashout</a></li>
+                                                            <li><a href="#"><span class="icon"><i class="fa fa-file" aria-hidden="true"></i></span>Report</a></li>
+                                                            <li><a href="#"><span class="icon"><i class="fa fa-bars" aria-hidden="true"></i></span>Menu</a></li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                            </div>
+                                            <div class="inner-footer">
+                                                <div class="container">
+                                                    <span class="title">Online Support:</span> <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a><a href="tel:+8801684285963"><i class="fa fa-phone" aria-hidden="true"></i> +88 01684285963</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
@@ -101,10 +148,19 @@
                     </div>
 
                 </div>
+
             </div>
         </div>
     </header>
     <!-- Header area navnbar or menu bar  inside end-->
+
+    <section id="content-area">
+        <div class="wrapper">
+            <div class="page conatainer">
+
+            </div>
+        </div>
+    </section>
 
     <!-- jQuery file linked  -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
