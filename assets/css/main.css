@@ -25,6 +25,7 @@ p{
     font-size: 12px;
     line-height: 18px;
     font-weight: 300;
+    margin: 0;
 }
 a, a:hover{
     text-decoration: none;
@@ -36,6 +37,139 @@ ul{
 }
 li{
     list-style-type: none;
+}
+
+.success{
+    color: #fff !important;
+    background-color: #138e4a !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.8px !important;
+}
+.warning{
+    color: #fff !important;
+    background-color: #eed202 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.8px !important;
+}
+.deleted{
+    color: #fff !important;
+    background-color: #D11A2A !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.8px !important;
+}
+.info{
+    color: #fff !important;
+    background-color: #999999 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.8px !important;
+}
+.plus{
+    color: #138e4a !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.8px !important;
+}
+.minus{
+    color: #D11A2A !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.8px !important;
+}
+.not{ /*not calculated */
+    color: #000000 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.8px !important;
+}
+.approve-btn {
+    padding: 4px 10px;
+    background-color: #138e4a;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    margin-right: 3px;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    transition: all 0.4s;
+    text-transform: uppercase;
+}
+.approve-btn:hover {
+    box-shadow: 0px 1px 6px rgb(0 0 0 / 40%);
+    transition: all 0.4s;
+}
+.reject-btn {
+    padding: 4px 10px;
+    background-color: #D11A2A;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    transition: all 0.4s;
+    text-transform: uppercase;
+}
+.reject-btn:hover {
+    box-shadow: 0px 1px 6px rgb(0 0 0 / 40%);
+    transition: all 0.4s;
+
+}
+
+.side-panel-modal {
+    position: fixed;
+    top: 0;
+    right: -110%; /* Initially hide the panel off-screen */
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    background-color: whitesmoke;
+    transition: right 0.5s; /* Add transition for smooth animation */
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 60%);
+
+}
+
+.side-panel-modal.open {
+    right: 0 !important; /* Show the panel by moving it to the right position */
+    transition: 0.5s;
+}
+
+.side-panel-modal > .inner-header {
+    width: 100%;
+    padding: 3px 5px;
+    display: flex;
+    background-color: #B82329;
+    align-items: center;
+}
+
+.side-panel-modal > .inner-body {
+    /* Customize inner body styles as needed */
+    padding: 5px;
+}
+
+.side-panel-modal > .inner-footer {
+    /* Customize inner footer styles as needed */
+    position: absolute;
+    bottom: 0;
+    padding: 10px 5px;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 9%);
+    left: 0;
+    right: 0;
+}
+.side-panel-modal > .inner-header > .close-btn {
+    padding: 0px 5px;
+    flex: 0 0 auto;
+    width: auto;
+}
+.side-panel-modal > .inner-header > .close-btn > a {
+    text-decoration: none;
+    color: #fff;
+}
+.side-panel-modal > .inner-header > .title {
+    width: 100%;
+    flex: 0 0 auto;
+    height: fit-content;
+}
+.side-panel-modal > .inner-header > .title > h6 {
+    margin: 0;
+    padding: 0;
 }
 
 /*============================================================
@@ -61,6 +195,7 @@ Header section and main menu CSS
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 
 /* top bar css  */
@@ -120,13 +255,12 @@ Header section and main menu CSS
     bottom: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+
     text-align: center;
     vertical-align: middle;
     font-size: 12px;
     background-color: white;
     line-height: 24px;
-    
 }
 #header-section .navbar-area .top-bar .balance-area .balance-show {
     background: #dddddd;
@@ -174,6 +308,7 @@ Main menu CSS
     padding: 5px 20px;
     font-size: 15px;
     color: #fff;
+    text-transform: capitalize;
     border-bottom: 3px solid #B82329;
 }
 #header-section .navbar-area .menu-bar #main_menu ul li a:hover {
@@ -190,9 +325,9 @@ Main menu CSS
     top: -104%;
     right: 20px;
 }
-#header-section .navbar-area .menu-bar #main_menu > .floating-btn-group a {
+#header-section .navbar-area .menu-bar #main_menu > .floating-btn-group > a {
     padding: 5px;
-    background: red;
+    background: #B82329;
     border-radius: 50%;
     color: #fff;
     display: inline-block;
@@ -204,6 +339,25 @@ Main menu CSS
 #header-section .navbar-area .menu-bar #main_menu > .floating-btn-group a i{
     font-size: 16px;
     line-height: 32px;
+}
+
+/* floating btn and service panel css  */
+
+.service-panel-area {
+    position: fixed;
+    top: 0;
+    right: -110%; /* Initially hide the panel off-screen */
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    transition: right 0.5s; /* Add transition for smooth animation */
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 60%);
+}
+
+.service-panel-area.open {
+    right: 0; /* Show the panel by moving it to the right position */
 }
 
 /*===================================
@@ -408,8 +562,263 @@ sidebar menu CSS
     text-shadow: 0px 5px 3px rgb(0 0 0 / 30%);
     display: inline;
 }
+#content-body{
+    padding: 0 5px;
+}
+#content-body > .wrapper > .page {
+    margin-bottom: 60px;
+}
 
 
+/* Home Page CSS Style  */
+#home-page{}
+/* Mini Transection History */
+#home-page > .mini-trxn-histoy {
+    max-width: 500px;
+    margin-bottom: 80px;
+}
+.mini-trxn-histoy > .top-bar{}
+.mini-trxn-histoy > .trxn-body{}
+/* Transection Details Card  */
+.mini-trxn-histoy > .trxn-body > .trxn-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 3px;
+    max-height: 100px;
+    border-radius: 3px;
+    margin-top: 5px;
+    border: 1px solid rgb(221 221 221 / 38%);
+    transition:  0.3s;
+    cursor: pointer;
+
+}
+.mini-trxn-histoy > .trxn-body > .trxn-card:hover {
+    box-shadow: 0px 0px 3px rgb(221 221 221 / 89%);
+    transform: scale(1.01);
+    transition:  0.3s;
+}
+.mini-trxn-histoy > .trxn-body > .trxn-card > .img-box {
+    width: 15%;
+    flex: 0 0 auto;
+}
+.mini-trxn-histoy > .trxn-body > .trxn-card > .details-first {
+    width: 50%;
+    flex: 0 0 auto;
+}
+.mini-trxn-histoy > .trxn-body > .trxn-card > .details-secound {
+    width: 30%;
+    flex: 0 0 auto;
+    padding-right: 5px;
+    height: fit-content;
+}
+.mini-trxn-histoy > .trxn-body > .trxn-card > .next-icon{
+    width: 5%;
+    flex: 0 0 auto;
+}
+/* Card inner details  */
+.mini-trxn-histoy > .trxn-body > .trxn-card > .img-box > img {
+    width: 100%;
+    height: 100%;
+}
+.mini-trxn-histoy > .trxn-body > .trxn-card > .details-first > p{}
+.mini-trxn-histoy > .trxn-body > .trxn-card > .details-first > .service-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+.mini-trxn-histoy > .trxn-body > .trxn-card > .details-first > .receiver-number {
+    font-size: 15px;
+    font-weight: 300;
+    color: #585858;
+    letter-spacing: 0.8px;
+}
+.mini-trxn-histoy > .trxn-body > .trxn-card > .details-first > .status {
+    font-size: 11px;
+    border-radius: 3px;
+    padding: 1px 4px;
+    color: #fff;
+    background-color: #999999;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+
+.mini-trxn-histoy > .trxn-body > .trxn-card > .details-first > span{}
+.mini-trxn-histoy > .trxn-body > .trxn-card > .details-secound > p {
+    text-align: right;
+}
+.mini-trxn-histoy > .trxn-body > .trxn-card > .details-secound > .amount-area {
+    font-size: 14px;
+    font-weight: 500;
+}
+.mini-trxn-histoy > .trxn-body > .trxn-card > .details-secound > .amount-area > .sum-symbal {
+    margin-right: 5px;
+}
+.mini-trxn-histoy > .trxn-body > .trxn-card > .details-secound > .time{
+    font-size: 13px;
+    font-weight: 300;
+    color: #818080;
+}
+.mini-trxn-histoy > .trxn-body > .trxn-card > .next-icon {
+    width: 5%;
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+.title-area > .title {
+    position: relative;
+}
+.title-area > .title::after {
+    content: "";
+    width: 75%;
+    height: 1px;
+    background-color: rgb(184 35 41 / 60%);
+    position: absolute;
+    margin-left: 20px;
+    top: 50%;
+}
+
+/* Request List css  */
+#home-page > .request-list {
+    max-width: 500px;
+    margin-bottom: 50px;
+}
+
+.request-list > .top-bar{}
+.request-list > .trxn-body{}
+/* Transection Details Card  */
+.request-list > .trxn-body > .trxn-card {
+    padding: 5px 3px;
+    max-height: max-content;
+    border-radius: 3px;
+    margin-top: 5px;
+    border: 1px solid rgb(221 221 221 / 38%);
+    transition: 0.3s;
+}
+.request-list > .trxn-body > .trxn-card > .trxn-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 3px;
+    max-height: max-content;
+    cursor: pointer;
+    
+}
+.request-list > .trxn-body > .trxn-card:hover {
+    box-shadow: 0px 0px 3px rgb(221 221 221 / 89%);
+    transform: scale(1.01);
+    transition:  0.3s;
+}
+.request-list > .trxn-body > .trxn-card > .trxn-details > .img-box {
+    width: 15%;
+    flex: 0 0 auto;
+}
+.request-list > .trxn-body > .trxn-card > .trxn-details > .details-first {
+    width: 50%;
+    flex: 0 0 auto;
+}
+.request-list > .trxn-body > .trxn-card > .trxn-details > .details-secound {
+    width: 30%;
+    flex: 0 0 auto;
+    padding-right: 5px;
+    height: fit-content;
+}
+.request-list > .trxn-body > .trxn-card > .trxn-details > .next-icon{
+    width: 5%;
+    flex: 0 0 auto;
+}
+.request-list > .trxn-body > .trxn-card > .approval-area {
+    width: 100%;
+    text-align: right;
+    padding-right: 10px;
+}
+/* Card inner details  */
+.request-list > .trxn-body > .trxn-card > .trxn-details > .img-box > img {
+    width: 100%;
+    height: 100%;
+}
+.request-list > .trxn-body > .trxn-card > .trxn-details > .details-first > p{}
+.request-list > .trxn-body > .trxn-card > .trxn-details > .details-first > .service-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+.request-list > .trxn-body > .trxn-card > .trxn-details > .details-first > .receiver-number {
+    font-size: 15px;
+    font-weight: 300;
+    color: #585858;
+    letter-spacing: 0.8px;
+}
+.request-list > .trxn-body > .trxn-card > .trxn-details > .details-first > .status {
+    font-size: 11px;
+    border-radius: 3px;
+    padding: 1px 4px;
+    color: #fff;
+    background-color: #999999;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+.request-list > .trxn-body > .trxn-card > .approval-area > .text {
+    text-transform: initial;
+    color: #9e9a9a;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+
+
+.request-list > .trxn-body > .trxn-card > .trxn-details > .details-first > span{}
+.request-list > .trxn-body > .trxn-card > .trxn-details > .details-secound > p {
+    text-align: right;
+}
+.request-list > .trxn-body > .trxn-card > .trxn-details > .details-secound > .amount-area {
+    font-size: 14px;
+    font-weight: 500;
+}
+.request-list > .trxn-body > .trxn-card > .trxn-details > .details-secound > .amount-area > .sum-symbal {
+    margin-right: 5px;
+}
+.request-list > .trxn-body > .trxn-card > .trxn-details > .details-secound > .time{
+    font-size: 13px;
+    font-weight: 300;
+    color: #818080;
+}
+.request-list > .trxn-body > .trxn-card > .trxn-details > .next-icon {
+    width: 5%;
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+/*==============================================
+ Hitory Page CSS Style  
+ ==============================================*/
+#history-page{}
+/* Mini Transection History */
+#history-page > .mini-trxn-histoy {
+    max-width: 500px;
+    margin-bottom: 80px;
+}
+.filter{
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    padding: 15px 0;
+    align-items: center;
+}
+.filter > .search-bar{}
+.filter > .filter-bar{}
+
+.filter > .search-bar input.search{
+    border: 1px solid #dddddd;
+    padding: 5px 5px 5px 10px;
+    font-size: 13px;
+    border-radius: 20px;
+}
+.filter > .search-bar input.search:focus-visible {
+    border: 1px solid #d6aeae;
+    outline: none;
+}
 
 /* Responsive  */
 
@@ -433,7 +842,7 @@ sidebar menu CSS
     #header-section .navbar-area .menu-bar #main_menu ul {
         text-align: center;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
     }
     #header-section .navbar-area .menu-bar #main_menu ul li {
         display: block;
@@ -447,15 +856,8 @@ sidebar menu CSS
     #header-section .navbar-area .menu-bar #main_menu ul li a {
         text-align: center;
         display: block;
-        padding: 5px 16px;
-        font-size: 4.2vw;
-        color: #fff;
-    }
-    #header-section .navbar-area .menu-bar #main_menu ul li a {
-        text-align: center;
-        display: block;
         padding: 5px 4vw;
-        font-size: 4.2vw;
+        font-size: 3.2vw;
         color: #fff;
     }
 
@@ -463,6 +865,22 @@ sidebar menu CSS
         background-color: #B82329;
         border-radius: 13px  13px 0 0;
         overflow: hidden;
+    }
+
+
+    /* Home page css style  */
+
+    /* mini trxn history  */
+    .mini-trxn-histoy > .trxn-body > .trxn-card > .details-first > .service-name {
+        font-size: 2.6vw;
+        font-weight: 500;
+        color: #000;
+    }
+    /* Request List  */
+    .request-list > .trxn-body > .trxn-card > .trxn-details > .details-first > .service-name {
+        font-size: 2.6vw;
+        font-weight: 500;
+        color: #000;
     }
 
 }

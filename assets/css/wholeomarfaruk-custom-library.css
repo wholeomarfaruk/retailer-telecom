@@ -1,0 +1,243 @@
+/*=====================================================================================
+// My Custom Library file
+===================================================================================== */
+
+/*=====================================================================================
+// Dynamic Side Panel Modal Attribute Targeted for Unique START - #wholeomarfaruk - component01
+===================================================================================== */
+/* Modal Calling  */
+
+/* <div class="floating-btn-group">
+    <a href="javascript:void(0)" class="toggle-side-panel-btn" data-target="modal1">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="side-panel-modal" id="modal1">
+    <!-- Modal content -->
+</div>
+
+<div class="floating-btn-group">
+    <a href="javascript:void(0)" class="toggle-side-panel-btn" data-target="modal2">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+    </a>
+</div>
+
+<div class="side-panel-modal" id="modal2">
+    <!-- Modal content -->
+</div> */
+
+/* Modal one  */
+/* <div class="side-panel-modal" id="modal1">
+    <div class="inner-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-auto">
+                    <div class="sub-menu-close-btn close-btn">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <h5 class="text-center text-white">Side Panel</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="inner-body"></div>
+    <div class="inner-footer"></div>
+</div> */
+
+/* Modal Two  */
+/* <div class="side-panel-modal" id="modal2">
+    <div class="inner-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-auto">
+                    <div class="sub-menu-close-btn close-btn">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <h5 class="text-center text-white">Side Panel</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="inner-body"></div>
+    <div class="inner-footer"></div>
+</div> */
+
+
+/* CSS Code  */
+
+
+.side-panel-modal {
+    position: fixed;
+    top: 0;
+    right: -110%; /* Initially hide the panel off-screen */
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    background-color: whitesmoke;
+    transition: right 0.5s; /* Add transition for smooth animation */
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 60%);
+
+}
+
+.side-panel-modal.open {
+    right: 0 !important; /* Show the panel by moving it to the right position */
+    transition: 0.5s;
+}
+
+.side-panel-modal > .inner-header {
+    width: 100%;
+    padding: 3px 5px;
+    display: flex;
+    background-color: #B82329;
+    align-items: center;
+}
+
+.side-panel-modal > .inner-body {
+    /* Customize inner body styles as needed */
+    padding: 5px;
+}
+
+.side-panel-modal > .inner-footer {
+    /* Customize inner footer styles as needed */
+    position: absolute;
+    bottom: 0;
+    padding: 10px 5px;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 9%);
+    left: 0;
+    right: 0;
+}
+.side-panel-modal > .inner-header > .close-btn {
+    padding: 0px 5px;
+    flex: 0 0 auto;
+    width: auto;
+}
+.side-panel-modal > .inner-header > .close-btn > a {
+    text-decoration: none;
+    color: #fff;
+}
+.side-panel-modal > .inner-header > .title {
+    width: 100%;
+    flex: 0 0 auto;
+    height: fit-content;
+}
+.side-panel-modal > .inner-header > .title > h6 {
+    margin: 0;
+    padding: 0;
+}
+
+/*=====================================================================================
+// Dynamic Side Panel Modal Attribute Targeted for Unique END - #wholeomarfaruk - component01
+===================================================================================== */
+
+/*=====================================================================================
+// Alart/Status text color theme with bg color START - #wholeomarfaruk - component02
+===================================================================================== */
+.success{
+    color: #fff !important;
+    background-color: #138e4a !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.8px !important;
+    border-radius: 3px;
+    padding: 1px 4px;
+}
+.warning{
+    color: #fff !important;
+    background-color: #eed202 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.8px !important;
+    border-radius: 3px;
+    padding: 1px 4px;
+}
+.deleted{
+    color: #fff !important;
+    background-color: #D11A2A !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.8px !important;
+    border-radius: 3px;
+    padding: 1px 4px;
+}
+.info{
+    color: #fff !important;
+    background-color: #999999 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.8px !important;
+    border-radius: 3px;
+    padding: 1px 4px;
+}
+
+/*=====================================================================================
+// Alart/Status text color theme with bg color END - #wholeomarfaruk - component02
+===================================================================================== */
+
+/*=====================================================================================
+// Balance ADD/Minus Deposite/Debit Credit/Debit & not calculated text color theme with bg color START - #wholeomarfaruk - component03
+===================================================================================== */
+
+.plus{
+    color: #138e4a !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.8px !important;
+}
+.minus{
+    color: #D11A2A !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.8px !important;
+}
+.not{ /*not calculated */
+    color: #000000 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.8px !important;
+}
+/*=====================================================================================
+// Balance ADD/Minus Deposite/Debit Credit/Debit & not calculated text color theme with bg color END - #wholeomarfaruk - component03
+===================================================================================== */
+/*=====================================================================================
+// Approval Buttons Approve or Reject Button, text color theme with bg color & hover -shadow Start - #wholeomarfaruk - component04
+===================================================================================== */
+.approve-btn {
+    padding: 4px 10px;
+    background-color: #138e4a;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    margin-right: 3px;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    transition: all 0.4s;
+    text-transform: uppercase;
+}
+.approve-btn:hover {
+    box-shadow: 0px 1px 6px rgb(0 0 0 / 40%);
+    transition: all 0.4s;
+}
+.reject-btn {
+    padding: 4px 10px;
+    background-color: #D11A2A;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    transition: all 0.4s;
+    text-transform: uppercase;
+}
+.reject-btn:hover {
+    box-shadow: 0px 1px 6px rgb(0 0 0 / 40%);
+    transition: all 0.4s;
+
+}
+
+/*=====================================================================================
+// Approval Buttons Approve or Reject Button, text color theme with bg color & hover -shadow END - #wholeomarfaruk - component04
+===================================================================================== */

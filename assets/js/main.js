@@ -6,11 +6,40 @@ $(document).ready(function () {
         // data: "text",
         dataType: "text",
         success: function (response) {
-            $('#content-area .page').html(response);
+            $('#content-body .page').html(response);
         }
     });
     
 
+    // calling individual page on index page
+    $('#main_menu > ul >li > a').on('click',function(event){
+        event.stopPropagation(); // Prevent event from bubbling up to parent li
+        var $page_Name= $(this).attr('calling-page');
+        console.log($page_Name);
+        if($page_Name !=undefined){
+            var $page_Url="pages/"+$page_Name+".php";
+            console.log($page_Url);
+            $.ajax({
+                type: "Get",
+                url: ""+$page_Url+"",
+                dataType: "text",
+                success: function (response) {
+                    $('#content-body .page').html(response);
+                }
+            });
+        }
+    });
+
+    //Toggle Service Panel Area    
+    $(document).ready(function() {
+        $('.service-panel-btn').click(function() {
+            $('.service-panel-area').toggleClass('open'); // Toggle the 'open' class on click
+        });
+    });
+    $('.close-btn').click(function() {
+        $('.service-panel-area').removeClass('open'); // Remove the 'open' class on click
+    });
+    
 
     // Sidebar Toggle
     $('.sidebar-open-btn').on('click', function () {
@@ -49,23 +78,24 @@ $(document).ready(function () {
 
 
 
-    // calling individual page on index page
-    $('#main_menu > ul >li > a').on('click',function(event){
-        event.stopPropagation(); // Prevent event from bubbling up to parent li
-        var $page_Name= $(this).attr('calling-page');
-        console.log($page_Name);
-        if($page_Name !=undefined){
-            var $page_Url="pages/"+$page_Name+".php";
-            $.ajax({
-                type: "Get",
-                url: ""+$page_Url+"",
-                dataType: "text",
-                success: function (response) {
-                    $('#content-area .page').html(response);
-                }
-            });
-        }
+    //=====================================================================================
+    // Dynamic Side Panel Modal Attribute Targeted for Unique START - #wholeomarfaruk - component01
+    //=====================================================================================
+    $(document).ready(function() {
+        $('.toggle-side-panel-btn').click(function() {
+            var targetModal = $(this).data('target'); // Get the target modal ID from data attribute
+            $('#' + targetModal).toggleClass('open'); // Toggle the 'open' class on the target modal
+        });
+        
+        $('.close-btn').click(function() {
+            $(this).closest('.side-panel-modal').removeClass('open'); // Remove the 'open' class on click
+        });
     });
+
+    //=====================================================================================
+    // Dynamic Side Panel Modal Attribute Targeted for Unique END - #wholeomarfaruk - component01
+    //=====================================================================================
+
 
     
 });
